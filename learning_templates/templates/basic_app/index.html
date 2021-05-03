@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Index Page</h1>
+  </body>
+</html> -->
+
+<!-- All the above can be commented and Have the below when doing template inheritance at base.html level. -->
+
+{% extends "basic_app/base.html" %}
+{% block body_block %}
+<h1>Welcome to Index Page</h1>
+<h2>This is Index.html page showing!. An example of template inheritance</h2>
+<!--  You can also do this filter in python with .upper -->
+<h2>{{ text|upper }}</h2>
+<!-- This is after creating custom filter 'cut' in my_extras.py -->
+<h2>{{ text|cut:'World' }}</h2>
+<h2>{{ number|add:"99" }}</h2>
+
+{% endblock %}
